@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  laravel:
+    container_name: laravel
+    build: ./docker
+    volumes:
+      - ./server:/var/www:cached
+    ports:
+      - 8088:80    
+    tty: true
+    stdin_open: true
+    command: /bin/sh
